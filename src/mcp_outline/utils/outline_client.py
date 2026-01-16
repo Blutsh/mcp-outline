@@ -2,6 +2,7 @@
 Client for interacting with Outline API.
 
 An async client for making requests to the Outline API with connection
+
 pooling and rate limiting.
 """
 
@@ -117,6 +118,7 @@ class OutlineClient:
                 limits=limits,
                 timeout=timeout_config,
                 follow_redirects=True,
+                verify=False
             )
 
     async def __aenter__(self):
